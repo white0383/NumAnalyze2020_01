@@ -32,8 +32,7 @@ double ProdTestD_func(double i, double x){
 int main() {
   double starttime = omp_get_wtime();
   //再現性のためシード設定
-  //init_genrand(2020); //現在時間をシードにする
-  init_genrand((unsigned)time(NULL));
+  init_genrand(20200520); 
 
   //Generate random number
   double z1[DATANUM], z2[DATANUM]; //Box-Muller法を用いた標準正規分布に従う乱数
@@ -47,10 +46,12 @@ int main() {
 
   //Calculate parameters
   double testD = 0.0;
+  double loopStartTime = omp_get_wtime();
   for(double xd = -5.0;xd <= 5.0; xd += 0.01){
     double test = fabs(CumuNormDist(xd) - FN(z1,DATANUM,xd));
     if(testD < test) testD = test;
   }
+  printf("for Loop with single threading : %lf\n",omp_get_wtime() - loopStartTime);
   testD = testD * sqrt(DATANUM);
 
   double prodTestD = 1.0;
