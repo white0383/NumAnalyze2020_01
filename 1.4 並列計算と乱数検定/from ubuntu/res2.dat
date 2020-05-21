@@ -1,4 +1,4 @@
-Single thread : 0.017984 s spend
+Single thread : 0.0179846142 s spend
 fkMulti[0] = 2
 fkMulti[1] = 18
 fkMulti[2] = 107
@@ -35,4 +35,4 @@ i:14 npk = 114.440918
 i:15 npk = 15.258789
 i:16 npk = 0.953674
 chiobs = 23.5906517717
-0.018040 s spend for whole work 
+0.0180400583 s spend for whole work 

@@ -56,7 +56,7 @@ int main()
 
   double timespendMulti = omp_get_wtime() - starttimeMulti;
 
-  printf("Single thread : %lf s spend\n", timespendMulti);
+  printf("Single thread : %.10lf s spend\n", timespendMulti);
   int sumMulti = 0;
   for (int i = 0; i < 17; i++)
   {
@@ -79,7 +79,7 @@ int main()
   }
 
   printf("chiobs = %.10lf\n", chiobs);
-  printf("%lf s spend for whole work \n",omp_get_wtime()-starttimeMulti);
+  printf("%.10lf s spend for whole work \n",omp_get_wtime()-starttimeMulti);
 
   return 0;
 }

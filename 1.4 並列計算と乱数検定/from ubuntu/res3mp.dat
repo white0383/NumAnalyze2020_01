@@ -1,5 +1,5 @@
-for Loop with multi threading : 0.265810
+for Loop with multi threading : 0.2658101257
 testD = 0.499874
 prodTestD = 0.057576495271482
-program time spend = 0.283506
+program time spend = 0.2835069088
 max threads = 2
